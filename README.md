@@ -1,8 +1,8 @@
-Program Overview
+Program Overview:
 
-This program allows you to replace product codes with clickable product links in PDF files, such as technical drawings. Here's how it works:
+  This program allows you to replace product codes with clickable product links in PDF files, such as technical drawings. Here's how it works:
 
-Manufacturer Information
+Manufacturer Information:
 
   The program extracts the manufacturer's name from the folder name that contains your PDF files.
   It also reads the product codes listed within those PDF files.
@@ -17,7 +17,7 @@ CSV File Setup
     
     3. Your Store Codes: Enter the corresponding product codes used in your store in the "Symbol_1" column.
     
-Adding Links
+Adding Links:
 
   The program uses the CSV file to match the manufacturer’s codes with your store’s codes.
   It then replaces the product codes in the PDF with links to the corresponding products in your store.
