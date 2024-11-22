@@ -54,7 +54,7 @@ Steps to Use the Program:
   4. Run the Program
      
     Put the CSV file path into the code.
-    Put the path of your PDF folder into the textbox.
+    Put the path of your PDF folder into the textbox. (You can put in multiple paths seperated by coma)
     Put in the base link, the code will get added at the end of the link e.g. https://yourdomain.com/pdf/{Your_Code}.
     The program will automatically replace the product codes in the PDFs with the appropriate links.
 
