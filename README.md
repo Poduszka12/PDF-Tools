@@ -7,7 +7,7 @@ Manufacturer Information:
   The program extracts the manufacturer's name from the folder name that contains your PDF files.
   It also reads the product codes listed within those PDF files.
 
-CSV File Setup
+CSV File Setup:
 
   You need to provide a CSV file with the following information:
   
