@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Tools</title>
+    <!-- Adding Barlow font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Tools</h1>
+
+        <!-- Tabs -->
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'csv_search_tab')" id="csv_search_tab_button"><i class="fas fa-search"></i> CSV Search</button>
+        </div>
+
+        <!-- Messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="messages" id="messages">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Tab Contents -->
+        <div id="csv_search_tab" class="tabcontent">
+            <h3>CSV Search</h3>
+            <form action="{{ url_for('index') }}" method="post" onsubmit="showLoadingSpinner('spinner_csv_search')">
+                <input type="hidden" name="action" value="csv_search">
+                
+                <div class="form-group">
+                    <label for="directory_paths">Directory Paths (separated by commas):</label>
+                    <input type="text" name="directory_paths" id="directory_paths" placeholder="e.g., C:\folder1, C:\folder2" required>
+                </div>
+
+                <!-- Optional Field: Base Link -->
+                <div class="form-group">
+                    <label for="base_link">Base Link:</label>
+                    <input type="text" name="base_link" id="base_link" placeholder="e.g., https://yourdomain.com/pdf/">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Process PDF with CSV">
+                </div>
+
+                <div class="loading-spinner" id="spinner_csv_search">
+                    <img src="{{ url_for('static', filename='spinner.gif') }}" alt="Loading...">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p></p>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            if (evt) {
+                var messages = document.getElementById("messages");
+                if (messages) {
+                    messages.parentNode.removeChild(messages);
+                }
+                localStorage.setItem('activeTab', tabName);
+            }
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            if (evt) {
+                evt.currentTarget.className += " active";
+            } else {
+                var tabButton = document.getElementById(tabName + "_button");
+                if (tabButton) {
+                    tabButton.className += " active";
+                }
+            }
+        }
+
+        var activeTab = localStorage.getItem('activeTab') || 'csv_search_tab';
+        openTab(null, activeTab);
+
+        function showLoadingSpinner(spinnerId) {
+            var spinner = document.getElementById(spinnerId);
+            spinner.classList.add('visible');
+        }
+    </script>
+</body>
+</html>
