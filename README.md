@@ -10,9 +10,13 @@ Manufacturer Information
 CSV File Setup
 
   You need to provide a CSV file with the following information:
+  
     1. Manufacturer Name: Enter the name of the manufacturer in the "name" column.
+    
     2. Manufacturer Codes: Enter the product codes provided by the manufacturer (as shown on their technical drawings) in the "Symbol" column.
+    
     3. Your Store Codes: Enter the corresponding product codes used in your store in the "Symbol_1" column.
+    
 Adding Links
 
   The program uses the CSV file to match the manufacturer’s codes with your store’s codes.
