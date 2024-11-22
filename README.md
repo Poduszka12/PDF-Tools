@@ -17,15 +17,18 @@ Adding Links
 
 The program uses the CSV file to match the manufacturer’s codes with your store’s codes.
 It then replaces the product codes in the PDF with links to the corresponding products in your store.
+
 Steps to Use the Program:
 
 Organize Your Files
 
 Place all relevant PDF files in a folder named after the manufacturer.
+
 Prepare the CSV File
 
 Create a CSV file with three columns: name, Symbol, and Symbol_1.
 Fill in the manufacturer’s name, their product codes, and your store’s product codes accordingly.
+
 Run the Program
 
 Load the PDF files and the CSV file into the program.
