@@ -22,6 +22,12 @@ Adding Links:
   The program uses the CSV file to match the manufacturer’s codes with your store’s codes.
   It then replaces the product codes in the PDF with links to the corresponding products in your store.
 
+How to run:
+  1. Open CMD.
+  2. Select the directory of the folder with the program.
+  3. Run "python app6.py" command.
+  4. Open your browser and put your IPv4 with ":5000" or http://127.0.0.1:5000/
+
 Steps to Use the Program:
   
   1. Replace placeholders in the code with proper paths.
