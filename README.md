@@ -1,6 +1,6 @@
 Program Overview:
 
-  This program allows you to replace product codes with clickable product links in PDF files, such as technical drawings. Here's how it works:
+  This Flask program allows you to replace product codes with clickable product links in PDF files, such as technical drawings. Here's how it works:
 
 Manufacturer Information:
 
