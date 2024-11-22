@@ -25,13 +25,16 @@ Adding Links
 Steps to Use the Program:
 
   1. Organize Your Files
+     
     Place all relevant PDF files in a folder named after the manufacturer.
 
-  2. Prepare the CSV File
+  3. Prepare the CSV File
+     
     Create a CSV file with three columns: name, Symbol, and Symbol_1.
     Fill in the manufacturer’s name, their product codes, and your store’s product codes accordingly.
 
-  3. Run the Program
+  5. Run the Program
+     
     Load the PDF files and the CSV file into the program.
     The program will automatically replace the product codes in the PDFs with the appropriate links.
 
