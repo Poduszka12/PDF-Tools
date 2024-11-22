@@ -23,17 +23,29 @@ Adding Links:
   It then replaces the product codes in the PDF with links to the corresponding products in your store.
 
 Steps to Use the Program:
+  
+  1. Replace placeholders in the code with proper paths.
 
-  1. Organize Your Files
+  2. Prepare the CSV File
      
-    Place all relevant PDF files in a folder named after the manufacturer.
+    1. Create a CSV file with three columns: name, Symbol, and Symbol_1.
+    2. Fill in the manufacturer’s name, their product codes, and your store’s product codes accordingly.
 
-  3. Prepare the CSV File
+  3. Organize Your Files
      
-    Create a CSV file with three columns: name, Symbol, and Symbol_1.
-    Fill in the manufacturer’s name, their product codes, and your store’s product codes accordingly.
+    For One Manufacturer:
 
-  5. Run the Program
+      1. Create a folder named after the manufacturer and place all relevant PDF files inside.
+      2. Enter the path to this folder in the program.
+      
+    For Multiple Manufacturers:
+
+      1. Create a main folder.
+      2. Inside the main folder, create separate subfolders for each manufacturer, naming each subfolder with the respective manufacturer's name.
+      3. Place the corresponding PDF files inside each manufacturer’s subfolder.
+      4. Enter the path to the main folder in the program. The program will then process each manufacturer's subfolder automatically.
+
+  4. Run the Program
      
     Put the CSV file path into the code.
     Put the path of your PDF folder into the textbox.
